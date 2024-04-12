@@ -1,9 +1,9 @@
-### Command Install
+### Cara Install Sekali Enter Harus Ubuntu 20.04 Atau Diatasnya, Tanpa Update  !
 
 ```
 rm -f setup.sh && sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt install -y bzip2 gzip coreutils screen curl unzip && wget https://raw.githubusercontent.com/10ribuadm/scriptvps/main/setup.sh && chmod +x setup.sh && ./setup.sh
 ```
-#### Cara Gampang Tanpa Update
+#### Cara Install Santai !
 
 1.
 
