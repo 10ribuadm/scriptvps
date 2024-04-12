@@ -49,3 +49,8 @@ chmod +x setup.sh
 # Catatan Keren 🚀
 
 Script ini dibuat dengan penuh cinta. Terima kasih kepada Allah atas segala berkah-Nya, serta terima kasih kepada orang tua, Mas Iban, dan Alam Semesta. Juga terima kasih kepada para moderator lainnya seperti Dugong Lewat, Senowahyu, dan lainnya. Semua kontribusi mereka sangat berarti dalam pengembangan script ini. 💻✨
+
+------------
+**Telegram**
+------------
+[duomase](https://t.me/zonkerk)
