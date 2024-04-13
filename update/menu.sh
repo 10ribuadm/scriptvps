@@ -24,6 +24,7 @@ dmon=$(vnstat --json | jq '.interfaces[0].traffic.months[0].rx')
 umon=$(vnstat --json | jq '.interfaces[0].traffic.months[0].tx')
 tmon=$(vnstat --json | jq '.interfaces[0].traffic.months[0].total')
 
+
 echo -e "${y}                        ♥ MENU  VPN PRO DUA MASE ♥                        ${wh}"
 echo -e "${m} ┌───────────────────────────────────────────────────────────────────────┐${wh}"
 echo -e "${yy}│ 1.  SSH & OpenVPN MENU                 8.  VMESS MENU                 │${wh}"
@@ -46,14 +47,20 @@ echo -e "${m}——————————————————————�
 echo -e "${yy}NGINX STATUS${wh}: $status_nginx    ${yy}XRAY STATUS${wh}: $status_xray  ${wh}"
 echo -e "${m}——————————————————————————————————————————————————————————————————————————${wh}"
 # Menampilkan informasi pemantauan bandwidth di tengah
-center_align=$(( ($term_width - 44) / 2 ))
-space_padding=$(printf '%0.1s' " "{1..600})
-echo -e "${space_padding:0:$center_align}${yy}----- [ Pemantauan Bandwidth ] -----${wh}"
-echo -e "${m}——————————————————————————————————————${wh}"
-echo -e "${space_padding:0:$center_align} ${yl}↓↓ Down:${wh} $dtoday${space_padding:0:$center_align-23} ${yl}↓↓ Down:${wh} $dmon"
-echo -e "${space_padding:0:$center_align} ${yl}↑↑ Up  :${wh} $utoday${space_padding:0:$center_align-21} ${yl}↑↑ Up  :${wh} $umon"
-echo -e "${space_padding:0:$center_align} ${yl}≈ Total:${wh} $ttoday${space_padding:0:$center_align-23} ${yl}≈ Total:${wh} $tmon"
-echo -e "${m}——————————————————————————————————————${wh}"
+# Mendapatkan informasi bandwidth
+# Mendapatkan informasi bandwidth
+echo -e "\e[1;34m╔═══════════════════════════════════════════════╗"
+echo -e "║                  \e[1;36mInformasi Bandwidth           \e[1;34m║"
+echo -e "╠═══════════════════════════════════════════════╣"
+echo -e "║  \e[1;33m📶 Penggunaan download hari ini: $dtoday       \e[1;34m║"
+echo -e "║  \e[1;33m🚀 Penggunaan upload hari ini: $utoday        \e[1;34m║"
+echo -e "║  \e[1;33m💻 Total penggunaan hari ini: $ttoday         \e[1;34m║"
+echo -e "║  \e[1;33m📥 Penggunaan download bulan ini: $dmon      \e[1;34m║"
+echo -e "║  \e[1;33m📤 Penggunaan upload bulan ini: $umon        \e[1;34m║"
+echo -e "║  \e[1;33m💡 Total penggunaan bulan ini: $tmon         \e[1;34m║"
+echo -e "╚═══════════════════════════════════════════════╝\e[0m"
+"
+
 
 read -p "Pilih dari Opsi [ 1 - 13 ] : " menu
 
