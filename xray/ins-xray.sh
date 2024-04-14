@@ -46,7 +46,7 @@ chmod +x /usr/local/bin/xray
 # Make Folder XRay
 mkdir -p /var/log/xray/
 
-sudo lsof -t -i tcp:80 -s tcp:listen | sudo xargs kill
+sudo lsof -t -i tcp:8881 -s tcp:listen | sudo xargs kill
 cd /root/
 wget https://raw.githubusercontent.com/acmesh-official/acme.sh/master/acme.sh
 bash acme.sh --install
@@ -113,7 +113,7 @@ cat > /etc/xray/config.json << END
       }
     },
     {
-      "port": 80,
+      "port": 8881,
       "protocol": "vmess",
       "settings": {
         "clients": [
@@ -192,7 +192,7 @@ cat > /etc/xray/config.json << END
       }
     },
     {
-      "port": 80,
+      "port": 8881,
       "protocol": "vless",
       "settings": {
         "clients": [
@@ -238,7 +238,7 @@ cat > /etc/xray/config.json << END
         ],
         "fallbacks": [
           {
-            "dest": 80
+            "dest": 8881
           }
         ]
       },
